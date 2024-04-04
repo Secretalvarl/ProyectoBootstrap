@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+.h3 {
+
+	color: black;
+}
+
+.negro {
+
+	color: black;
+}
+
+.carrusell-container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.imagen1 {
+
+	background-image: url(Fotos/94c29aca8e7e6b5d_org.jpeg);
+	background-size: cover;
+	background-position: center;
+
+}
+
+.imagen2 {
+	background-image: url(Fotos/12HK-7334-OskarBakke.jpeg);
+}
+
+.fondoNegro {
+
+	background-color: black;
+}
+
+.centrado {
+
+	text-align: center;
+}
+
+.blanco {
+	color: white;
+}
+
+.tamamyoFoto {
+
+	height: 1000px;
+}
+
+.imagen3 {
+
+	background-image: url(Fotos/Terrier\ combi_4.png);
+	background-size: cover;
+	background-position: center;
+	height: 500px;
+}
+
+.imagen4 {
+
+	background-image: url(Fotos/home-05-featureblock-workers.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 500px;
+}
+
+.largo {
+
+	height: 50px;
+}
+
+.menuVertical {
+	margin-top: 0px;
+	background-color: black;
+	margin-left: 0px;
+	list-style: none;
+	padding: 10px;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+}
+
+.fondo {
+
+	background-color: gray;
+}
+
+.imagenCarrito {
+
+	width: 45px
+}
+
+.imagen3 {
+
+	background-image: url(Fotos/Terrier\ combi_4.png);
+	background-size: cover;
+	background-position: center;
+	height: 563px;
+}
+
+.foto:hover {
+	transform: scale(1.1);
+	box-shadow: 0px 0px 10px white;
+}
