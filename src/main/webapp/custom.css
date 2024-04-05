@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+centrado2{
+	
+	padding-top: 300px;
+}
+
+.ordenado{
+	
+	padding-right: 30px;
+	padding-left: 20px;
+}
 .h3 {
 
 	color: black;
@@ -101,8 +111,8 @@
 	box-shadow: 0px 0px 10px white;
 }
 
-.centrado{
-	
+.centrado {
+
 	text-align: center;
 	padding-top: 10px;
 }
