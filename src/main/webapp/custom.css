@@ -1,15 +1,16 @@
 @charset "UTF-8";
 
-centrado2{
-	
+centrado2 {
+
 	padding-top: 300px;
 }
 
-.ordenado{
-	
+.ordenado {
+
 	padding-right: 30px;
 	padding-left: 20px;
 }
+
 .h3 {
 
 	color: black;
@@ -115,4 +116,48 @@ centrado2{
 
 	text-align: center;
 	padding-top: 10px;
+}
+
+.imagen5 {
+
+	background-image: url(Fotos/848730b691dc0b0b_org.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 300px;
+}
+
+.imagen6 {
+
+	background-image: url(Fotos/976bfa95b086ee17_org.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 300px;
+}
+
+.separacion {
+
+	padding-top: 100px;
+}
+
+.centrargt {
+
+	flex-direction: column;
+	justify-content: center;
+
+}
+
+.imagen7{
+	
+	background-image: url(Fotos/08_DSC2790-Oskar-Bakke.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 300px;
+}
+
+.imagen8{
+	
+	background-image: url(Fotos/rs1.snow_.2020-4.jpeg);
+	background-size: cover;
+	background-position: center;
+	height: 300px;
 }
