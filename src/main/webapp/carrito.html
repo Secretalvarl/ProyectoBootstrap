@@ -12,7 +12,7 @@
 </head>
 
 <body>
-		<header>
+	<header>
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="index.html">
@@ -23,7 +23,7 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="collapsibleNavbar">
-					<ul class="navbar-nav ms-auto " >
+					<ul class="navbar-nav ms-auto ">
 						<li class="nav-item">
 							<a class="nav-link ordenado" href="carrito.html">
 								<img src="Fotos/carrito.jpg" style="width:40px;" class="rounded-pill">
@@ -45,143 +45,122 @@
 		</nav>
 	</header>
 
-	
+
 	<main>
 		<br><br><br><br><br>
-		<section>
-			<div class="container py-5 h-150">
-				<div class="row d-flex justify-content-center align-items-center h-100">
-					<div class="col">
-						<div class="card">
-							<div class="card-body bg-dark p-4">
-								<div class="row">
-									<div class="col-lg-7">
-										<div class="card bg-primary text-white rounded-3">
-											<div class="card-body">
-												<div class="d-flex justify-content-between align-items-center mb-4">
-													<h1 class="mb-0">Direccion de envio</h1>
-													<img src="Fotos/logo.jpg" class="img-fluid rounded-3 imagenCarrito">
-												</div>
-												<form class="mt-4">
-													<div class="form-outline form-white mb-4">
-														<input type="text" id="typeName"
-															class="form-control form-control-lg" siez="17"
-															placeholder="Nombre y apellidos" />
-														<label class="form-label" for="typeExp"></label>
-													</div>
-													<div class="form-outline form-white mb-4">
-														<input type="text" id="typeText"
-															class="form-control form-control-lg" siez="17"
-															placeholder=" Calle, número, apartamento" minlength="19"
-															maxlength="19" />
-														<label class="form-label" for="typeExp"></label>
-													</div>
+		<div class="container py-5">
+			<div class="row d-flex justify-content-center align-items-stretch">
+				<div class="col-lg-6">
+					<div class="card bg-primary text-white rounded-3 h-100">
+						<div class="card-body">
+							<div class="d-flex justify-content-between align-items-center mb-4">
+								<h1 class="mb-0">Dirección de envío</h1>
+								<img src="Fotos/logo.jpg" class="img-fluid rounded-3" style="width: 100px;">
+							</div>
+							<form class="mt-4">
+								<div class="form-outline form-white mb-4">
+									<input type="text" id="typeName" class="form-control form-control-lg" siez="17"
+										placeholder="Nombre y apellidos" />
+									<label class="form-label" for="typeExp"></label>
+								</div>
+								<div class="form-outline form-white mb-4">
+									<input type="text" id="typeText" class="form-control form-control-lg" siez="17"
+										placeholder=" Calle, número, apartamento" minlength="19" maxlength="19" />
+									<label class="form-label" for="typeExp"></label>
+								</div>
 
-													<div class="row mb-4">
-														<div class="col-md-6">
-															<div class="form-outline form-white">
-																<input type="text" id="typeExp"
-																	class="form-control form-control-lg"
-																	placeholder="Ciudad" size="7" id="exp" minlength="7"
-																	maxlength="7" />
-																<label class="form-label" for="typeExp"></label>
-															</div>
-														</div>
-														<div class="col-md-6">
-															<div class="form-outline form-white">
-																<input type="password" id="typeText"
-																	class="form-control form-control-lg"
-																	placeholder="Provincia" size="1" minlength="3"
-																	maxlength="3" />
-																<label class="form-label" for="typeExp"></label>
-															</div>
-														</div>
-														<div class="col-md-6">
-															<div class="form-outline form-white">
-																<input type="password" id="typeText"
-																	class="form-control form-control-lg"
-																	placeholder="Codigo postal" size="1" minlength="3"
-																	maxlength="3" />
-																<label class="form-label" for="typeExp"></label>
-															</div>
-														</div>
-														<hr class="my-4">
-
-														<button type="button" class="btn btn-block btn-lg">
-															<div class="d-flex justify-content-between">
-																<span>Guardar</span>
-															</div>
-														</button>
-													</div>
-												</form>
-											</div>
+								<div class="row mb-4">
+									<div class="col-md-6">
+										<div class="form-outline form-white">
+											<input type="text" id="typeExp" class="form-control form-control-lg"
+												placeholder="Ciudad" size="7" id="exp" minlength="7" maxlength="7" />
+											<label class="form-label" for="typeExp"></label>
 										</div>
 									</div>
-									<div class="col-lg-5">
-										<div class="card bg-primary text-white rounded-3">
-											<div class="card-body">
-												<div class="d-flex justify-content-between align-items-center mb-4">
-													<h1 class="mb-0">Detalles tarjeta</h1>
-													<img src="Fotos/logo.jpg" class="img-fluid rounded-3 imagenCarrito">
-												</div>
-												<form class="mt-4">
-													<div class="form-outline form-white mb-4">
-														<input type="text" id="typeName"
-															class="form-control form-control-lg" siez="17"
-															placeholder="Nombre completo" />
-														<label class="form-label" for="typeName">Propietario
-															tarjeta</label>
-													</div>
-													<div class="form-outline form-white mb-4">
-														<input type="text" id="typeText"
-															class="form-control form-control-lg" siez="17"
-															placeholder="1234 5678 9012 3457" minlength="19"
-															maxlength="19" />
-														<label class="form-label" for="typeText">Numero tarjeta</label>
-													</div>
-													<div class="row mb-4">
-														<div class="col-md-6">
-															<div class="form-outline form-white">
-																<input type="text" id="typeExp"
-																	class="form-control form-control-lg"
-																	placeholder="MM/YY" size="7" id="exp" minlength="7"
-																	maxlength="7" />
-																<label class="form-label" for="typeExp">Fecha
-																	caducidad</label>
-															</div>
-														</div>
-														<div class="col-md-6">
-															<div class="form-outline form-white">
-																<input type="password" id="typeText"
-																	class="form-control form-control-lg"
-																	placeholder="***" size="1" minlength="3"
-																	maxlength="3" />
-																<label class="form-label" for="typeText">CVC</label>
-															</div>
-														</div>
-													</div>
-												</form>
-												<hr class="my-4">
-												<div class="d-flex justify-content-between mb-4">
-													<p class="mb-2">Total(Incl. IVA)</p>
-													<p class="mb-2">3.002.000$</p>
-												</div>
-												<button type="button" class="btn btn-block btn-lg">
-													<div class="d-flex justify-content-between">
-														<span> Venta 3.002.000$</span>
-													</div>
-												</button>
-											</div>
+									<div class="col-md-6">
+										<div class="form-outline form-white">
+											<input type="password" id="typeText" class="form-control form-control-lg"
+												placeholder="Provincia" size="1" minlength="3" maxlength="3" />
+											<label class="form-label" for="typeExp"></label>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-outline form-white">
+											<input type="password" id="typeText" class="form-control form-control-lg"
+												placeholder="Codigo postal" size="1" minlength="3" maxlength="3" />
+											<label class="form-label" for="typeExp"></label>
+										</div>
+									</div>
+									<hr class="my-4">
+
+									<button type="button" class="btn btn-block btn-lg">
+										<div class="d-flex justify-content-between">
+											<span>Guardar</span>
+										</div>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+                    <div class="card bg-primary text-white rounded-3 h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h1 class="mb-0">Detalles tarjeta</h1>
+                                <img src="Fotos/logo.jpg" class="img-fluid rounded-3" style="width: 100px;">
+                            </div>
+							<form class="mt-4">
+								<div class="form-outline form-white mb-4">
+									<input type="text" id="typeName" class="form-control form-control-lg" siez="17"
+										placeholder="Nombre completo" />
+									<label class="form-label" for="typeName">Propietario
+										tarjeta</label>
+								</div>
+								<div class="form-outline form-white mb-4">
+									<input type="text" id="typeText" class="form-control form-control-lg" siez="17"
+										placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" />
+									<label class="form-label" for="typeText">Numero tarjeta</label>
+								</div>
+								<div class="row mb-4">
+									<div class="col-md-6">
+										<div class="form-outline form-white">
+											<input type="text" id="typeExp" class="form-control form-control-lg"
+												placeholder="MM/YY" size="7" id="exp" minlength="7" maxlength="7" />
+											<label class="form-label" for="typeExp">Fecha
+												caducidad</label>
+										</div>
+									</div>
+									<div class="col-md-6 ">
+										<div class="form-outline form-white">
+											<input type="password" id="typeText" class="form-control form-control-lg"
+												placeholder="***" size="1" minlength="3" maxlength="3" />
+											<label class="form-label" for="typeText">CVC</label>
 										</div>
 									</div>
 								</div>
+							</form>
+							<hr>
+							<hr class="my-4">
+							<div class="d-flex justify-content-between mb-4">
+								<p class="mb-2">Total(Incl. IVA)</p>
+								<p class="mb-2">3.002.000$</p>
 							</div>
+							<button type="button" class="btn btn-block btn-lg">
+								<div class=" d-flex justify-content-between">
+									<span> Venta 3.002.000$</span>
+								</div>
+							</button>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
 		</section>
 	</main>
-</body>
 
 </html>

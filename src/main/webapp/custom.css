@@ -172,7 +172,11 @@ centrado2 {
 	height: 300px;
 }
 
-.masSeparacion{
-	
+.masSeparacion {
+
 	padding-top: 200px;
+}
+.abajo{
+	
+	margin-bottom:  30px;
 }
