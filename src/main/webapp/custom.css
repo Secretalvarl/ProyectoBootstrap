@@ -78,11 +78,6 @@
 	height: 50px;
 }
 
-.largoLargo {
-
-	height: 500px;
-}
-
 .fondoGris {
 
 	background-color: rgb(128, 128, 128);
@@ -95,7 +90,6 @@
 	list-style: none;
 	padding: 10px;
 	text-decoration: none;
-	color: white;
 	text-align: center;
 }
 
@@ -176,7 +170,8 @@
 
 	padding-top: 200px;
 }
-.abajo{
-	
-	margin-bottom:  30px;
+
+.abajo {
+
+	margin-bottom: 30px;
 }
