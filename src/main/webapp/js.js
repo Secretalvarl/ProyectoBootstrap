@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		console.log(`Añadido al carrito: ${nombreCoche}, ${precioCoche}, ${imagenCoche}`);
 		const coche = { nombre: nombreCoche, precio: precioCoche, imagen: imagenCoche };
 		cochesEnCarrito.push(coche);
-		mostrarCarrito(); // Llamamos a mostrarCarrito después de agregar el coche
+		mostrarCarrito();
 	}
 
 	function mostrarCarrito() {
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		let totalPrecio = 0;
 
 		cochesEnCarrito.forEach(coche => {
-			// Parseamos el precio para obtener un número decimal
+		
 			const precioNumerico = parseFloat(coche.precio.replace('€', '').replace('.', '').replace(',', '.'));
 			totalPrecio += precioNumerico;
 
@@ -104,7 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			listaCoches.appendChild(fila);
 		});
 
-		// Actualizamos el precio total en el carrito
 		precioTotalElement.textContent = `${totalPrecio.toFixed(2)}€`;
 	}
 });
