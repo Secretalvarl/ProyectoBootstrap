@@ -1,4 +1,5 @@
 let usuarios = [];
+let cochesEnCarrito = [];
 
 function registrarUsuario() {
 	const nombreUsuario = document.getElementById("nombreUsuario").value;
@@ -72,38 +73,49 @@ function validarTarjeta() {
 	const mensaje = `Venta completada: \n\nNombre completo: ${nombreCompleto}\nNúmero tarjeta: ${numeroTarjeta}\nFecha caducidad: ${fechaCaducidad}\nCVC: ${cvc}`;
 	alert(mensaje);
 }
+
+function agregarAlCarrito(nombreCoche, precioCoche, imagenCoche) {
+	console.log(`Añadido al carrito: ${nombreCoche}, ${precioCoche}, ${imagenCoche}`);
+	const coche = { nombre: nombreCoche, precio: precioCoche, imagen: imagenCoche };
+	cochesEnCarrito.push(coche);
+	mostrarCarrito();
+}
+
+function mostrarCarrito() {
+    const listaCoches = document.getElementById("listaCoches");
+    const precioTotalElement = document.getElementById("precioTotal");
+
+    let totalPrecio = 0;
+
+    cochesEnCarrito.forEach(coche => {
+
+        const precioLimpio = coche.precio
+            .replace('€', '')    
+            .replace('.', '')    
+            .replace(',', '.');  
+
+        const precioNumerico = parseFloat(precioLimpio);
+
+        if (!isNaN(precioNumerico)) {
+            totalPrecio += precioNumerico;
+
+            const fila = document.createElement("tr");
+            fila.innerHTML = `
+                <td>${coche.nombre}</td>
+                <td><img src="${coche.imagen}" alt="${coche.nombre}" style="max-width: 100px;"></td>
+                <td>${coche.precio}</td>
+            `;
+            listaCoches.appendChild(fila);
+        } else {
+            console.error(`Error al convertir el precio a número: ${coche.precio}`);
+        }
+    });
+
+    precioTotalElement.textContent = `${totalPrecio.toFixed(2)}€`;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
-	
-	let cochesEnCarrito = [];
+	agregarAlCarrito();
+	mostrarCarrito();
 
-	function agregarAlCarrito(nombreCoche, precioCoche, imagenCoche) {
-		console.log(`Añadido al carrito: ${nombreCoche}, ${precioCoche}, ${imagenCoche}`);
-		const coche = { nombre: nombreCoche, precio: precioCoche, imagen: imagenCoche };
-		cochesEnCarrito.push(coche);
-		mostrarCarrito();
-	}
-
-	function mostrarCarrito() {
-		const listaCoches = document.getElementById("listaCoches");
-		const precioTotalElement = document.getElementById("precioTotal");
-		listaCoches.innerHTML = "";
-
-		let totalPrecio = 0;
-
-		cochesEnCarrito.forEach(coche => {
-		
-			const precioNumerico = parseFloat(coche.precio.replace('€', '').replace('.', '').replace(',', '.'));
-			totalPrecio += precioNumerico;
-
-			const fila = document.createElement("tr");
-			fila.innerHTML = `
-            <td>${coche.nombre}</td>
-            <td><img src="${coche.imagen}" alt="${coche.nombre}" style="max-width: 100px;"></td>
-            <td>${coche.precio}</td>
-        `;
-			listaCoches.appendChild(fila);
-		});
-
-		precioTotalElement.textContent = `${totalPrecio.toFixed(2)}€`;
-	}
 });
