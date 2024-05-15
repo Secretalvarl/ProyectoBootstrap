@@ -3,40 +3,55 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Koenigsegg</title>
-	<meta name="Alvaro Garcia Barrera" name="edu.agbProyectoBootstrap">
+	<meta name="description" content="Pagina web de compra de coches de lujo">
+	<meta name="author" content="Alvaro Garcia Barrera">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="custom.css" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 	<script src="js.js"></script>
 </head>
 
 <body>
 	<header>
+		<!-- Barra de navegación principal -->
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
 			<div class="container-fluid">
+				<!-- Logo de la marca en la barra de navegación -->
 				<a class="navbar-brand" href="index.html">
 					<img src="Fotos/logo.jpg" style="width:50px;" class="rounded-pill"> Koenigsegg
 				</a>
+				<!-- Botón de alternancia para dispositivos móviles -->
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 					data-bs-target="#collapsibleNavbar">
 					<span class="navbar-toggler-icon"></span>
 				</button>
+				<!-- Contenido colapsable de la barra de navegación -->
 				<div class="collapse navbar-collapse" id="collapsibleNavbar">
-					<ul class="navbar-nav ms-auto ">
+					<!-- Lista de elementos de la barra de navegación -->
+					<ul class="navbar-nav ms-auto">
+						<!-- Elementos de la barra de navegación -->
 						<li class="nav-item">
-							<a class="nav-link ordenado" href="inicioSesion.html">Inicio Sesíon</a>
+							<a class="nav-link ordenado" href="pedidos.html">Mis pedidos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link ordenado" href="inicioSesion.html">Inicio Sesión</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link ordenado" href="carrito.html">
+								<!-- Icono de carrito de compras -->
 								<img src="Fotos/carrito.jpg" style="width:40px;" class="rounded-pill">
 							</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link ordenado" href="garaje.html">Garaje</a>
 						</li>
+						<!-- Elemento de menú desplegable -->
 						<li class="nav-item dropdown">
+							<!-- Icono de menú desplegable -->
 							<a class="navbar-toggler-icon" href="#" role="button" data-bs-toggle="dropdown"></a>
+							<!-- Contenido del menú desplegable -->
 							<ul class="dropdown-menu dropdown-menu-end">
 								<li><a class="dropdown-item" href="gt.html">GT</a></li>
 								<li><a class="dropdown-item" href="rs.html">RS</a></li>
@@ -49,51 +64,73 @@
 	</header>
 	<br><br><br>
 	<main>
+		<!-- Contenedor principal con margen top (mt-5) -->
 		<div class="container mt-5">
+			<!-- Fila centrada -->
 			<div class="row justify-content-center">
+				<!-- Columna para el formulario (col-md-6) -->
 				<div class="col-md-6">
+					<!-- Contenedor de pestañas (tab-container) -->
 					<div class="tab-container">
+						<!-- Pestaña de Registro -->
 						<div class="tab">
+							<!-- Título de la pestaña (h2) -->
 							<h2>Registrarse</h2>
+							<!-- Formulario de registro (registrarUsuario) con llamada a función en submit -->
 							<form id="registrarUsuario" onsubmit="return registrarUsuario()">
+								<!-- Tabla para organizar campos -->
 								<table class="table">
+									<!-- Fila 1: Nombre de usuario -->
 									<tr>
 										<td><label>Nombre de usuario:</label></td>
-										<td><input type="text" id="nombreUsuario" class="form-control "></td>
+										<td><input type="text" id="nombreUsuario" class="form-control"></td>
 									</tr>
+									<!-- Fila 2: Correo electrónico -->
 									<tr>
 										<td><label>Correo electrónico:</label></td>
 										<td><input type="email" id="correoElectronico" class="form-control"></td>
 									</tr>
+									<!-- Fila 3: Contraseña -->
 									<tr>
 										<td><label>Contraseña:</label></td>
 										<td><input type="password" id="contraseñaRegistro" class="form-control"></td>
 									</tr>
+									<!-- Fila 4: Botón de registro -->
 									<tr>
-										<td colspan="2"><button type="submit" class="btn btn-primary">Registrarse</button></td>
+										<td colspan="2"><button type="submit"
+												class="btn btn-primary">Registrarse</button></td>
 									</tr>
 								</table>
 							</form>
 						</div>
+						<!-- Pestaña de Inicio de Sesión -->
 						<div class="tab">
+							<!-- Título de la pestaña (h2) -->
 							<h2>Iniciar sesión</h2>
+							<!-- Formulario de inicio de sesión (iniciarSesion) con llamada a función en submit -->
 							<form id="iniciarSesion" onsubmit="return iniciarSesion()">
+								<!-- Tabla para organizar campos -->
 								<table class="table">
+									<!-- Fila 1: Nombre de usuario o correo electrónico -->
 									<tr>
 										<td><label>Nombre de usuario o correo electrónico:</label></td>
 										<td><input type="text" id="Usuario" class="form-control"></td>
 									</tr>
+									<!-- Fila 2: Contraseña -->
 									<tr>
 										<td><label>Contraseña:</label></td>
 										<td><input type="password" id="contraseña" class="form-control"></td>
 									</tr>
+									<!-- Fila 3: Botón de inicio de sesión -->
 									<tr>
-										<td colspan="2"><button type="submit" class="btn btn-primary">Inicia sesión</button></td>
+										<td colspan="2"><button type="submit" class="btn btn-primary">Inicia
+												sesión</button></td>
 									</tr>
 								</table>
 							</form>
 						</div>
 					</div>
+					<!-- Párrafo para mostrar mensajes de error (mensajeError) -->
 					<p id="mensajeError"></p>
 				</div>
 			</div>

@@ -14,30 +14,43 @@
 <body>
 
 	<header>
+		<!-- Barra de navegación principal -->
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
 			<div class="container-fluid">
+				<!-- Logo de la marca en la barra de navegación -->
 				<a class="navbar-brand" href="index.html">
 					<img src="Fotos/logo.jpg" style="width:50px;" class="rounded-pill"> Koenigsegg
 				</a>
+				<!-- Botón de alternancia para dispositivos móviles -->
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 					data-bs-target="#collapsibleNavbar">
 					<span class="navbar-toggler-icon"></span>
 				</button>
+				<!-- Contenido colapsable de la barra de navegación -->
 				<div class="collapse navbar-collapse" id="collapsibleNavbar">
-					<ul class="navbar-nav ms-auto ">
+					<!-- Lista de elementos de la barra de navegación -->
+					<ul class="navbar-nav ms-auto">
+						<!-- Elementos de la barra de navegación -->
 						<li class="nav-item">
-							<a class="nav-link ordenado" href="inicioSesion.html">Inicio Sesíon</a>
+							<a class="nav-link ordenado" href="pedidos.html">Mis pedidos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link ordenado" href="inicioSesion.html">Inicio Sesión</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link ordenado" href="carrito.html">
+								<!-- Icono de carrito de compras -->
 								<img src="Fotos/carrito.jpg" style="width:40px;" class="rounded-pill">
 							</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link ordenado" href="garaje.html">Garaje</a>
 						</li>
+						<!-- Elemento de menú desplegable -->
 						<li class="nav-item dropdown">
+							<!-- Icono de menú desplegable -->
 							<a class="navbar-toggler-icon" href="#" role="button" data-bs-toggle="dropdown"></a>
+							<!-- Contenido del menú desplegable -->
 							<ul class="dropdown-menu dropdown-menu-end">
 								<li><a class="dropdown-item" href="gt.html">GT</a></li>
 								<li><a class="dropdown-item" href="rs.html">RS</a></li>
@@ -50,30 +63,38 @@
 	</header>
 
 	<div class="row">
+		<!-- Columna vertical del menú -->
 		<div class="col-1 menuVertical">
 			<ul>
 				<li class="largo"></li>
-				<br>
-				<a class="blanco d-none d-xl-block" href="#Final">Final</a>
+				<br> <!-- Salto de línea -->
+				<a class="blanco d-none d-xl-block" href="#Final">Final</a> <!-- Enlace con texto "Final" -->
 			</ul>
 		</div>
+
+		<!-- Columna principal (contenido principal) -->
 		<div class="col-11">
 			<main>
+				<!-- Sección con fondo negro y ID "Inicio" -->
 				<section class="fondoNegro" id="Inicio">
-					<div class="carousel-inner carousel slide carrusell-container " data-bs-ride="carousel">
+					<!-- Carrusel de imágenes -->
+					<div class="carousel-inner carousel slide carrusell-container" data-bs-ride="carousel">
+						<!-- Primera imagen del carrusel (activa) -->
 						<div class="carousel-item active" data-bs-interval="3000">
 							<img src="Fotos/koenigsegg-jesko.jpg" style="width:100%">
 							<div class="carousel-caption">
 								<h5 class="h5">Koenigsegg Jesko</h5>
 							</div>
 						</div>
-						<div class="carousel-item data-bs-interval=" 3000"">
+						<!-- Segunda imagen del carrusel -->
+						<div class="carousel-item" data-bs-interval="3000">
 							<img src="Fotos/koenigsegg-regera.webp" style="width:100%">
 							<div class="carousel-caption">
 								<h5 class="h5">Koenigsegg Regera</h5>
 							</div>
 						</div>
-						<div class="carousel-item data-bs-interval=" 3000"">
+						<!-- Tercera imagen del carrusel -->
+						<div class="carousel-item" data-bs-interval="3000">
 							<img src="Fotos/koenigsegg-agera.jpg" style="width:100%">
 							<div class="carousel-caption">
 								<h5 class="h5">Koenigsegg Agera</h5>
@@ -81,37 +102,47 @@
 						</div>
 					</div>
 				</section>
+
+				<!-- Sección con clase "imagen1" y "tamamyoFoto" -->
 				<section class="imagen1 tamamyoFoto">
 					<div>
 						<div class="row centrado">
-							<div class="col-sm  mt-2 p-3 blanco">Gemera</div>
-							<br><br><br><br>
+							<div class="col-sm mt-2 p-3 blanco">Gemera</div>
+							<br><br><br><br> <!-- Varios saltos de línea -->
 						</div>
-						<br><br><br>
+						<br><br><br> <!-- Más saltos de línea -->
 						<div class="row">
-							<div class="col-sm ms-sm-2 mt-2  p-3 centrado">PRIMERO EN EL MUNDO MEGA GT PARA CUATRO</div>
+							<div class="col-sm ms-sm-2 mt-2 p-3 centrado">PRIMERO EN EL MUNDO MEGA GT PARA CUATRO</div>
 						</div>
+					</div>
 				</section>
+
+				<!-- Sección con clase "imagen2" y "tamamyoFoto", y ID "Final" -->
 				<section class="imagen2 tamamyoFoto" id="Final">
 					<div>
 						<div class="row centrado">
-							<div class="col-sm  mt-2 p-3 border-4 blanco">Jesko attack</div>
-							<br><br><br><br>
+							<div class="col-sm mt-2 p-3 border-4 blanco">Jesko attack</div>
+							<br><br><br><br> <!-- Varios saltos de línea -->
 						</div>
-						<br><br><br>
+						<br><br><br> <!-- Más saltos de línea -->
 						<div class="row">
 							<div class="col-sm ms-sm-2 mt-2 p-3 centrado">CAMINO LEGAL LEYENDA DE LA PISTA</div>
 						</div>
 					</div>
 				</section>
+
+				<!-- Sección con fondo negro y contenido en columnas -->
 				<section class="fondoNegro">
 					<div class="container">
 						<div class="row align-items-center">
+							<!-- Primera columna (imagen4) -->
 							<div class="col-md-3 mb-3 mb-md-0">
 								<div class="imagen4"></div>
 							</div>
+							<!-- Segunda columna (contenido blanco) -->
 							<div class="col-md-6 mb-3 mb-md-0">
 								<div class="blanco">
+									<!-- Párrafo de texto -->
 									<p>
 										Mantenerse a la vanguardia en un competitivo panorama de la e-movilidad al más
 										puro estilo Koenigsegg, estamos ofreciendo nuestros innovadores a una clientela
@@ -120,6 +151,7 @@
 									</p>
 								</div>
 							</div>
+							<!-- Tercera columna (imagen3) -->
 							<div class="col-md-3 mb-3 mb-md-0">
 								<div class="imagen3"></div>
 							</div>
@@ -129,12 +161,12 @@
 			</main>
 		</div>
 
+		<!-- Pie de página -->
 		<footer>
 			<div class="container-fluid">
 				<img src="Fotos/logo.jpg" style="width:100px;" class="rounded-pilljustify-content-end">
 			</div>
 		</footer>
-
 	</div>
 </body>
 

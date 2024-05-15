@@ -4,39 +4,54 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Koenigsegg</title>
+	<meta name="description" content="Pagina web de compra de coches de lujo">
+	<meta name="author" content="Alvaro Garcia Barrera">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="custom.css" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="js.js"></script>
+
 </head>
 
 <body>
 	<header>
+		<!-- Barra de navegación principal -->
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
 			<div class="container-fluid">
+				<!-- Logo de la marca en la barra de navegación -->
 				<a class="navbar-brand" href="index.html">
 					<img src="Fotos/logo.jpg" style="width:50px;" class="rounded-pill"> Koenigsegg
 				</a>
+				<!-- Botón de alternancia para dispositivos móviles -->
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 					data-bs-target="#collapsibleNavbar">
 					<span class="navbar-toggler-icon"></span>
 				</button>
+				<!-- Contenido colapsable de la barra de navegación -->
 				<div class="collapse navbar-collapse" id="collapsibleNavbar">
+					<!-- Lista de elementos de la barra de navegación -->
 					<ul class="navbar-nav ms-auto">
+						<!-- Elementos de la barra de navegación -->
+						<li class="nav-item">
+							<a class="nav-link ordenado" href="pedidos.html">Mis pedidos</a>
+						</li>
 						<li class="nav-item">
 							<a class="nav-link ordenado" href="inicioSesion.html">Inicio Sesión</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link ordenado" href="carrito.html">
+								<!-- Icono de carrito de compras -->
 								<img src="Fotos/carrito.jpg" style="width:40px;" class="rounded-pill">
 							</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link ordenado" href="garaje.html">Garaje</a>
 						</li>
+						<!-- Elemento de menú desplegable -->
 						<li class="nav-item dropdown">
+							<!-- Icono de menú desplegable -->
 							<a class="navbar-toggler-icon" href="#" role="button" data-bs-toggle="dropdown"></a>
+							<!-- Contenido del menú desplegable -->
 							<ul class="dropdown-menu dropdown-menu-end">
 								<li><a class="dropdown-item" href="gt.html">GT</a></li>
 								<li><a class="dropdown-item" href="rs.html">RS</a></li>
@@ -47,17 +62,23 @@
 			</div>
 		</nav>
 	</header>
-	<br><br><br>
+	<br><!-- Salto de línea -->
+	<br><!-- Salto de línea -->
+	<br><!-- Salto de línea -->
 	<main>
 		<div class="container py-5">
+			<!-- Row principal con dos columnas -->
 			<div class="row d-flex justify-content-center align-items-stretch">
-				<div class="col-lg-6">
+				<!-- Columna 1: Dirección de envío -->
+				<div class="col-lg-6" id="direccionCompleta">
 					<div class="card bg-primary text-white rounded-3 h-100">
 						<div class="card-body">
+							<!-- Encabezado de la columna -->
 							<div class="d-flex justify-content-between align-items-center mb-4">
 								<h1 class="mb-0">Dirección de envío</h1>
 								<img src="Fotos/logo.jpg" class="img-fluid rounded-3" style="width: 100px;">
 							</div>
+							<!-- Formulario para la dirección de envío -->
 							<form id="direccionCompleta" class="mt-4">
 								<div class="form-outline form-white mb-4">
 									<input type="text" id="nombreApellido" class="form-control form-control-lg"
@@ -66,32 +87,33 @@
 								</div>
 								<div class="form-outline form-white mb-4">
 									<input type="text" id="direccion" class="form-control form-control-lg"
-										placeholder="Calle, número, apartamento" minlength="19" maxlength="19" />
+										placeholder="Calle, número, apartamento" maxlength="40" />
 									<label class="form-label" for="direccion"></label>
 								</div>
 								<div class="row mb-4">
 									<div class="col-md-6">
 										<div class="form-outline form-white">
 											<input type="text" id="ciudad" class="form-control form-control-lg"
-												placeholder="Ciudad" size="7" minlength="7" maxlength="7" />
+												placeholder="Ciudad" size="7" maxlength="19" />
 											<label class="form-label" for="ciudad"></label>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-outline form-white">
 											<input type="text" id="provincia" class="form-control form-control-lg"
-												placeholder="Provincia" size="1" minlength="3" maxlength="3" />
+												placeholder="Provincia" size="1" maxlength="19" />
 											<label class="form-label" for="provincia"></label>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-outline form-white">
 											<input type="text" id="codigoPostal" class="form-control form-control-lg"
-												placeholder="Código postal" size="1" minlength="3" maxlength="3" />
+												placeholder="Código postal" size="1" maxlength="5" />
 											<label class="form-label" for="codigoPostal"></label>
 										</div>
 									</div>
 								</div>
+								<!-- Botón para guardar la dirección -->
 								<button type="submit" class="btn btn-block bg-light">
 									<div class="d-flex justify-content-between">
 										<span>Guardar</span>
@@ -101,13 +123,17 @@
 						</div>
 					</div>
 				</div>
+
+				<!-- Columna 2: Detalles de la tarjeta -->
 				<div class="col-lg-6">
 					<div class="card bg-primary text-white rounded-3 h-100">
 						<div class="card-body">
+							<!-- Encabezado de la columna -->
 							<div class="d-flex justify-content-between align-items-center mb-4">
 								<h1 class="mb-0">Detalles tarjeta</h1>
 								<img src="Fotos/logo.jpg" class="img-fluid rounded-3" style="width: 100px;">
 							</div>
+							<!-- Formulario para los detalles de la tarjeta -->
 							<form id="tarjetaForm" class="mt-4">
 								<div class="form-outline form-white mb-4">
 									<input type="text" id="nombreCompleto" class="form-control form-control-lg"
@@ -116,32 +142,29 @@
 								</div>
 								<div class="form-outline form-white mb-4">
 									<input type="text" id="numeroTarjeta" class="form-control form-control-lg"
-										placeholder="1234 5678 9012 3456" minlength="19" maxlength="19" />
+										placeholder="1234 5678 9012 3456" maxlength="16" />
 									<label class="form-label" for="numeroTarjeta">Número tarjeta</label>
 								</div>
 								<div class="row mb-4">
 									<div class="col-md-6">
 										<div class="form-outline form-white">
 											<input type="text" id="fechaCaducidad" class="form-control form-control-lg"
-												placeholder="MM/AA" minlength="5" maxlength="5" />
+												placeholder="MM/AA" maxlength="5" />
 											<label class="form-label" for="fechaCaducidad">Fecha caducidad
-												(MM/AA)</label>
+												(MM/YY)</label>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-outline form-white">
 											<input type="text" id="cvc" class="form-control form-control-lg"
-												placeholder="CVC" minlength="3" maxlength="3" />
+												placeholder="CVC" maxlength="3" />
 											<label class="form-label" for="cvc">CVC</label>
 										</div>
 									</div>
 								</div>
-								<div class="carrito py-5 text-center">
-									<div id="mostrarCarrito">
-										<p>Total (Incl. IVA): <span id="precioTotal"></span></p>
-									</div>
-								</div>
-								<button type="button" class="btn bg-light" onclick="validarTarjeta()">
+								<!-- Botón para comprar (llama a una función JavaScript) -->
+								<button type="button" class="btn bg-light"
+									onclick="validarTarjeta(); limpiarCarrito();">
 									<div class="d-flex justify-content-between">
 										<span>Comprar</span>
 									</div>
@@ -151,24 +174,35 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- Sección para mostrar el carrito de compras -->
+			<div class="carrito py-5 text-center">
+				<div id="mostrarCarrito">
+					<h3>Carrito de Compras</h3>
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">Nombre</th>
+								<th scope="col">Imagen</th>
+								<th scope="col">Precio</th>
+							</tr>
+						</thead>
+						<tbody id="listaCoches"></tbody>
+					</table>
+					<p>
+						<span id="precioTotal"></span>
+					</p>
+					<!-- Botón para limpiar el carrito -->
+					<button type="button" class="btn bg-light" onclick="limpiarCarrito()">
+						<div class="d-flex justify-content-between">
+							<span>Limpiar Carrito</span>
+						</div>
+					</button>
+				</div>
+			</div>
 		</div>
 	</main>
-	<div class="carrito py-5 text-center">
-		<div id="mostrarCarrito">
-			<h3>Carrito de Compras</h3>
-			<table class="table">
-				<thead>
-					<tr>
-						<th scope="col">Nombre</th>
-						<th scope="col">Imagen</th>
-						<th scope="col">Precio</th>
-					</tr>
-				</thead>
-				<tbody id="listaCoches"></tbody>
-			</table>
-			<p>Total (Incl. IVA): <span id="precioTotal">0€</span></p>
-		</div>
-	</div>
+	<script src="js.js"></script>
 </body>
 
 </html>

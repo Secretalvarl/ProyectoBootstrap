@@ -4,39 +4,55 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Koenigsegg</title>
+	<meta name="description" content="Pagina web de compra de coches de lujo">
+	<meta name="author" content="Alvaro Garcia Barrera">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="custom.css" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </head>
 
 <body>
 	<header>
+		<!-- Barra de navegación principal -->
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
 			<div class="container-fluid">
+				<!-- Logo de la marca en la barra de navegación -->
 				<a class="navbar-brand" href="index.html">
 					<img src="Fotos/logo.jpg" style="width:50px;" class="rounded-pill"> Koenigsegg
 				</a>
+				<!-- Botón de alternancia para dispositivos móviles -->
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 					data-bs-target="#collapsibleNavbar">
 					<span class="navbar-toggler-icon"></span>
 				</button>
+				<!-- Contenido colapsable de la barra de navegación -->
 				<div class="collapse navbar-collapse" id="collapsibleNavbar">
+					<!-- Lista de elementos de la barra de navegación -->
 					<ul class="navbar-nav ms-auto">
+						<!-- Elementos de la barra de navegación -->
+						<li class="nav-item">
+							<a class="nav-link ordenado" href="pedidos.html">Mis pedidos</a>
+						</li>
 						<li class="nav-item">
 							<a class="nav-link ordenado" href="inicioSesion.html">Inicio Sesión</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link ordenado" href="carrito.html">
+								<!-- Icono de carrito de compras -->
 								<img src="Fotos/carrito.jpg" style="width:40px;" class="rounded-pill">
 							</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link ordenado" href="garaje.html">Garaje</a>
 						</li>
+						<!-- Elemento de menú desplegable -->
 						<li class="nav-item dropdown">
+							<!-- Icono de menú desplegable -->
 							<a class="navbar-toggler-icon" href="#" role="button" data-bs-toggle="dropdown"></a>
+							<!-- Contenido del menú desplegable -->
 							<ul class="dropdown-menu dropdown-menu-end">
 								<li><a class="dropdown-item" href="gt.html">GT</a></li>
 								<li><a class="dropdown-item" href="rs.html">RS</a></li>
@@ -48,19 +64,22 @@
 		</nav>
 	</header>
 
-	<br><br><br>
+	<br>
+	<br>
+	<br>
 	<main class="container separacion">
+		<!-- Sección principal -->
 		<section class="py-5 text-center">
 			<div class="row py-lg-5">
 				<div class="col-lg-6 col-md-8 mx-auto">
-					<br><br>
-					<h1>LEGADO</h1>
+					<h1>LEGADO</h1> <!-- Título "LEGADO" centrado -->
 				</div>
 			</div>
 		</section>
 		<div class="album py-5">
 			<div class="container">
 				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="agregarAlCarrito">
+					<!-- Producto 1 -->
 					<div class="col">
 						<div class="card shadow-sm">
 							<img class="foto" src="Fotos/_DSC9564-2_0.jpg">
@@ -68,14 +87,16 @@
 								<p class="card-text centrado">REGERA</p>
 								<div class="d-flex justify-content-between align-items-center">
 									<div class="btn-group">
+										<!-- Botón para agregar al carrito (llama a una función JavaScript) -->
 										<button type="button" class="btn btn-sm btn-outline-secondary"
 											onclick="agregarAlCarrito('REGERA', '1.000.000€', 'Fotos/_DSC9564-2_0.jpg')">Añadir</button>
 									</div>
-									<span>1.000.000€</span>
+									<span>1.000.000€</span> <!-- Precio -->
 								</div>
 							</div>
 						</div>
 					</div>
+					<!-- Producto 2 -->
 					<div class="col">
 						<div class="card shadow-sm">
 							<img class="foto" src="Fotos/_DSC2893_0.jpg">
@@ -83,14 +104,16 @@
 								<p class="card-text centrado">AGERA RS</p>
 								<div class="d-flex justify-content-between align-items-center">
 									<div class="btn-group">
+										<!-- Botón para agregar al carrito (llama a una función JavaScript) -->
 										<button type="button" class="btn btn-sm btn-outline-secondary"
 											onclick="agregarAlCarrito('AGERA RS', '2.500.000€', 'Fotos/_DSC2893_0.jpg')">Añadir</button>
 									</div>
-									<a>2.500.000€</a>
+									<span>2.500.000€</span> <!-- Precio -->
 								</div>
 							</div>
 						</div>
 					</div>
+					<!-- Producto 3 -->
 					<div class="col">
 						<div class="card shadow-sm">
 							<img class="foto" src="Fotos/AGERA S HUNDRA.png">
@@ -98,14 +121,16 @@
 								<p class="card-text centrado">AGERA S</p>
 								<div class="d-flex justify-content-between align-items-center">
 									<div class="btn-group">
+										<!-- Botón para agregar al carrito (llama a una función JavaScript) -->
 										<button type="button" class="btn btn-sm btn-outline-secondary"
 											onclick="agregarAlCarrito('AGERA S', '800.000€', 'Fotos/AGERA S HUNDRA.png')">Añadir</button>
 									</div>
-									<a>800.000€</a>
+									<span>800.000€</span> <!-- Precio -->
 								</div>
 							</div>
 						</div>
 					</div>
+					<!-- Producto 4 -->
 					<div class="col">
 						<div class="card shadow-sm">
 							<img class="foto" src="Fotos/ONE1 GARAGE_0.png">
@@ -113,14 +138,16 @@
 								<p class="card-text centrado">ONE 1</p>
 								<div class="d-flex justify-content-between align-items-center">
 									<div class="btn-group">
+										<!-- Botón para agregar al carrito (llama a una función JavaScript) -->
 										<button type="button" class="btn btn-sm btn-outline-secondary"
 											onclick="agregarAlCarrito('ONE 1', '2.400.000€', 'Fotos/ONE1 GARAGE_0.png')">Añadir</button>
 									</div>
-									<a>2.400.000€</a>
+									<span>2.400.000€</span> <!-- Precio -->
 								</div>
 							</div>
 						</div>
 					</div>
+					<!-- Producto 5 -->
 					<div class="col">
 						<div class="card shadow-sm">
 							<img class="foto" src="Fotos/AGERA R LAKE.png">
@@ -128,14 +155,16 @@
 								<p class="card-text centrado">AGERA R</p>
 								<div class="d-flex justify-content-between align-items-center">
 									<div class="btn-group">
+										<!-- Botón para agregar al carrito (llama a una función JavaScript) -->
 										<button type="button" class="btn btn-sm btn-outline-secondary"
 											onclick="agregarAlCarrito('AGERA R', '1.200.000€', 'Fotos/AGERA R LAKE.png')">Añadir</button>
 									</div>
-									<a>1.200.000€</a>
+									<span>1.200.000€</span> <!-- Precio -->
 								</div>
 							</div>
 						</div>
 					</div>
+					<!-- Producto 6 -->
 					<div class="col">
 						<div class="card shadow-sm">
 							<img class="foto" src="Fotos/KenoZache_IMG_5958 copy.png">
@@ -143,14 +172,16 @@
 								<p class="card-text centrado">CCXR</p>
 								<div class="d-flex justify-content-between align-items-center">
 									<div class="btn-group">
+										<!-- Botón para agregar al carrito (llama a una función JavaScript) -->
 										<button type="button" class="btn btn-sm btn-outline-secondary"
 											onclick="agregarAlCarrito('CCXR', '4.800.000€', 'Fotos/KenoZache_IMG_5958 copy.png')">Añadir</button>
 									</div>
-									<a>4.800.000€</a>
+									<span>4.800.000€</span> <!-- Precio -->
 								</div>
 							</div>
 						</div>
 					</div>
+					<!-- Producto 7 -->
 					<div class="col">
 						<div class="card shadow-sm">
 							<img class="foto" src="Fotos/76-Oskar Bakke-Koenigsegg Car Week 2021-_DSC6272 2_0.jpg">
@@ -158,14 +189,16 @@
 								<p class="card-text centrado">CCX</p>
 								<div class="d-flex justify-content-between align-items-center">
 									<div class="btn-group">
+										<!-- Botón para agregar al carrito (llama a una función JavaScript) -->
 										<button type="button" class="btn btn-sm btn-outline-secondary"
 											onclick="agregarAlCarrito('CCX', '4.800.000€', 'Fotos/76-Oskar Bakke-Koenigsegg Car Week 2021-_DSC6272 2_0.jpg')">Añadir</button>
 									</div>
-									<a>4.850.000€</a>
+									<span>4.850.000€</span> <!-- Precio -->
 								</div>
 							</div>
 						</div>
 					</div>
+					<!-- Producto 8 -->
 					<div class="col">
 						<div class="card shadow-sm">
 							<img class="foto" src="Fotos/ccgt1.jpg">
@@ -173,14 +206,16 @@
 								<p class="card-text centrado">CCGT</p>
 								<div class="d-flex justify-content-between align-items-center">
 									<div class="btn-group">
+										<!-- Botón para agregar al carrito (llama a una función JavaScript) -->
 										<button type="button" class="btn btn-sm btn-outline-secondary"
 											onclick="agregarAlCarrito('CCGT', '4.800.000€', 'Fotos/ccgt1.jpg')">Añadir</button>
 									</div>
-									<a>4.660.000€</a>
+									<span>4.660.000€</span> <!-- Precio -->
 								</div>
 							</div>
 						</div>
 					</div>
+					<!-- Producto 9 -->
 					<div class="col">
 						<div class="card shadow-sm">
 							<img class="foto" src="Fotos/CC8S on the track_0.jpg">
@@ -188,10 +223,11 @@
 								<p class="card-text centrado">CC8S</p>
 								<div class="d-flex justify-content-between align-items-center">
 									<div class="btn-group">
+										<!-- Botón para agregar al carrito (llama a una función JavaScript) -->
 										<button type="button" class="btn btn-sm btn-outline-secondary"
 											onclick="agregarAlCarrito('CC8S', '1.500.000€', 'Fotos/CC8S on the track_0.jpg')">Añadir</button>
 									</div>
-									<a>1.500.000€</a>
+									<span>1.500.000€</span> <!-- Precio -->
 								</div>
 							</div>
 						</div>
