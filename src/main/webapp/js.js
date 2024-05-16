@@ -132,16 +132,13 @@ function agregarAlCarrito(nombreCoche, precioCoche, imagenCoche) {
     // Guardamos el carrito actualizado en localStorage
     localStorage.setItem('carrito', JSON.stringify(cochesEnCarrito));
 
-    // Actualizamos la visualización del carrito en el DOM
+    // Actualizamos la visualización del carrito
     mostrarCarrito();
 }
 
-// Función para mostrar el carrito en el DOM
+// Función para mostrar el carrito
 function mostrarCarrito() {
     const listaCoches = document.getElementById("listaCoches");
-
-    // Limpiamos la lista de coches antes de volver a mostrar
-    listaCoches.innerHTML = '';
 
     // Recorremos el array cochesEnCarrito y mostramos cada coche en la lista
     cochesEnCarrito.forEach(coche => {
@@ -153,12 +150,9 @@ function mostrarCarrito() {
         `;
         listaCoches.appendChild(fila);
     });
-
-    // Mostramos el precio total actualizado
-    mostrarPrecioTotal();
 }
 
-// Función para mostrar el precio total del carrito en el DOM
+// Función para mostrar el precio total del carrito
 function mostrarPrecioTotal() {
 	let totalPrecio = 0;
 
@@ -169,8 +163,8 @@ function mostrarPrecioTotal() {
 			totalPrecio += precioNumerico;
 		}
 	});
-
-	// Actualizar el precio total mostrado en el DOM
+	
+	// Actualizar el precio total mostrado 
 	const precioTotalSpan = document.getElementById('precioTotal');
 	if (precioTotalSpan) {
 		precioTotalSpan.textContent = `${totalPrecio.toFixed(2)}€`;
@@ -184,13 +178,13 @@ function limpiarCarrito() {
 	// Reiniciar el array cochesEnCarrito
 	cochesEnCarrito = [];
 
-	// Limpiar la lista de coches en el DOM
+	// Limpiar la lista de coches 
 	const listaCoches = document.getElementById('listaCoches');
 	if (listaCoches) {
 		listaCoches.innerHTML = '';
 	}
 
-	// Reiniciar el precio total mostrado en el DOM
+	// Reiniciar el precio total mostrado 
 	const precioTotalSpan = document.getElementById('precioTotal');
 	if (precioTotalSpan) {
 		precioTotalSpan.textContent = '0.00€';
@@ -209,37 +203,25 @@ if (carritoGuardado2) {
     cochesEnCarrito = JSON.parse(carritoGuardado);
 }
 
-// Función para agregar un coche al carrito
-function agregarAlCarrito(nombreCoche, precioCoche, imagenCoche) {
-    console.log(`Añadido al carrito: ${nombreCoche}, ${precioCoche}, ${imagenCoche}`);
-
-    const coche = { nombre: nombreCoche, precio: precioCoche, imagen: imagenCoche };
-    cochesEnCarrito.push(coche);
-
-    localStorage.setItem('carrito', JSON.stringify(cochesEnCarrito)); // Guardar carrito en localStorage
-
-    mostrarCarrito(); // Actualizar la visualización del carrito
-}
-
 // Función para obtener la fecha actual
 function obtenerFechaActual() {
-    const fecha = new Date();
-    const dia = fecha.getDate().toString().padStart(2, '0');
-    const mes = (fecha.getMonth() + 1).toString().padStart(2, '0');
-    const anyo = fecha.getFullYear();
+     const fechaHoy = new Date();
+    const anyo = fechaHoy.getFullYear(); 
+    const mes = fechaHoy.getMonth() + 1; // Obtener el mes actual (1-12)
+    const dia = fechaHoy.getDate();
+    
     return `${dia}-${mes}-${anyo}`;
 }
 
 // Función para mostrar los pedidos en la tabla
 function mostrarPedidos() {
     const tablaPedidos = document.getElementById('tablaPedidos');
-    tablaPedidos.innerHTML = ''; // Limpiamos la tabla antes de mostrar los pedidos
 
     pedidos.forEach(pedido => {
         const fila = document.createElement('div');
 
         // Construimos el contenido de la fila con la información del pedido
-        fila.textContent = `Usuario: ${pedido.usuario} | Productos: ${obtenerNombresProductos(pedido.productos)} | Ciudad Envío: ${pedido.direccionEnvio} | Fecha Realización: ${pedido.fechaRealizacion}`;
+        fila.textContent = `Usuario: ${pedido.usuario} | Productos: ${obtenerNombresProductos(pedido.productos)} | Direccion Envío: ${pedido.direccionEnvio} | Fecha Pedido: ${pedido.fechaRealizacion}`;
 
         // Agregamos la fila a la tabla de pedidos
         tablaPedidos.appendChild(fila);
